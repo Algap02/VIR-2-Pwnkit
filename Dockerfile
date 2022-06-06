@@ -13,8 +13,3 @@ RUN apt-get install -y policykit-1=0.105-26ubuntu1
 # low privileged user
 RUN useradd -ms /bin/bash lowpriv
 USER lowpriv
-
-# copy exploit
-RUN mkdir /home/lowpriv/pwnkit
-COPY conversion-mod.c Makefile pwnkit.c /home/lowpriv/pwnkit/
-WORKDIR /home/lowpriv/pwnkit
