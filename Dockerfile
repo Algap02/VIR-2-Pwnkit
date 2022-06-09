@@ -1,5 +1,5 @@
 # base
-FROM debian:stretch
+FROM ubuntu:focal
 RUN apt update
 
 # dev tools
